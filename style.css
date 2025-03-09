@@ -5,6 +5,7 @@
     font-family: "Arial", sans-serif;
 }
 
+/* Header */
 .header-row {
     display: flex;
     justify-content: space-between;
@@ -20,50 +21,46 @@
 .profile {
     width: 2rem;
     height: 2rem;
-    border-radius: 1000px;
+    border-radius: 50%;
     object-fit: cover;
 }
 
-@media (max-width: 768px) {
-    .header-item {
-        gap: 0.5rem;
-        font-size: 0.9rem;
-    }
-}
-
+/* Links */
 a {
     text-decoration: none;
     color: black;
+    font-size: 0.9rem;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
+/* Google Image */
 .google-image {
     width: 272px;
     height: 92px;
 }
 
+/* Buttons */
 .google-button {
     background-color: #f8f9fa;
-    border: 1px solid transparent;
+    border: 1px solid #dfe1e5;
     padding: 0.6rem 1.2rem;
     border-radius: 4px;
     font-size: 0.9rem;
     cursor: pointer;
-    transition: all 0.2s ease-in-out
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
 .google-button:hover {
-    border-color: #dfe1e5;
     background-color: #f1f3f4;
 }
 
+/* Language Section */
 .language {
     font-size: 0.95rem;
     display: flex;
-    flex-direction: row;
     gap: 0.5rem;
 }
 
@@ -71,43 +68,35 @@ a:hover {
     color: blue;
 }
 
+/* Main Section */
 main {
     min-height: calc(100vh - 10rem);
-    height: 100%;
-
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
-
     gap: 2rem;
-
     padding: 0 1rem;
 }
 
+/* Search Bar */
 .search-bar-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
-
     max-width: 40rem;
     width: 100%;
-
-    justify-content: space-between;
-
     padding: 0.75rem 1rem;
     border-radius: 50px;
     background: white;
-    border: 1px solid #dfe;
-
+    border: 1px solid #dfe1e5;
     box-shadow: 0 0 10px rgba(32, 33, 36, 0.28);
     transition: box-shadow 0.2s ease-in-out;
-
 }
+
 .search-bar-container:hover {
     box-shadow: 0 0 10px rgba(32, 33, 36, 0.38);
 }
+
 .search-bar {
     width: 85%;
     border: none;
@@ -122,17 +111,15 @@ main {
     height: 1.5rem;
 }
 
+/* Footer */
 footer {
     background-color: #f2f2f2;
-
     display: flex;
     flex-direction: column;
 }
 
 .footer-row {
     display: flex;
-    flex-direction: row;
-
     justify-content: space-between;
     padding: 0.75rem 2rem;
     width: 100%;
@@ -141,7 +128,6 @@ footer {
 .footer-row-left,
 .footer-row-right {
     display: flex;
-    flex-direction: row;
     gap: 1rem;
 }
 
@@ -154,7 +140,12 @@ footer {
     opacity: 0.4;
 }
 
+
 @media (max-width: 768px) {
+    .header-item {
+        gap: 0.5rem;
+    }
+
     .bottom-row {
         flex-direction: column;
         gap: 1rem;
