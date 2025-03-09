@@ -1,4 +1,3 @@
-/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,46 +5,11 @@
     font-family: "Arial", sans-serif;
 }
 
-/* Header Section */
 .header-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-}
-
-/* Left Side (About & Store) */
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 0.9rem;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-/* Right Side (Gmail, Images, Menu, Profile) */
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.header-right a {
-    text-decoration: none;
-    color: black;
-    font-size: 0.9rem;
-}
-
-.header-right a:hover {
-    text-decoration: underline;
+    margin: 1rem;
 }
 
 .dot-menu {
@@ -56,19 +20,23 @@
 .profile {
     width: 2rem;
     height: 2rem;
-    border-radius: 50%;
+    border-radius: 1000px;
     object-fit: cover;
 }
 
-/* Main Section */
-main {
-    min-height: calc(100vh - 10rem);
+.header-item {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 0 1rem;
+    gap: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .google-image {
@@ -76,22 +44,56 @@ main {
     height: 92px;
 }
 
-/* Search Bar */
-.search-bar-container {
-    display: flex;
-    align-items: center;
-    max-width: 40rem;
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border-radius: 50px;
-    background: white;
-    border: 1px solid #dfe;
-    box-shadow: 0 0 10px rgba(32, 33, 36, 0.28);
-    transition: box-shadow 0.2s ease-in-out;
+.google-button {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 0.5rem 1rem;
 }
 
-.search-bar-container:hover {
-    box-shadow: 0 0 10px rgba(32, 33, 36, 0.38);
+.google-button:hover {
+    border: 1px solid #7f7f7f;
+}
+
+.language {
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.language a {
+    color: blue;
+}
+
+main {
+    min-height: calc(100vh - 10rem);
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+
+    padding: 0 1rem;
+}
+
+.search-bar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    max-width: 40rem;
+    width: 100%;
+
+    justify-content: space-between;
+
+    padding: 0.75rem;
+    border-radius: 10rem;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .search-bar {
@@ -108,75 +110,48 @@ main {
     height: 1.5rem;
 }
 
-/* Buttons */
-.google-button {
-    background-color: #f8f9fa;
-    border: 1px solid transparent;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-.google-button:hover {
-    border-color: #dfe1e5;
-    background-color: #f1f3f4;
-}
-
-/* Language Links */
-.language {
-    font-size: 0.95rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-}
-
-.language a {
-    color: blue;
-    text-decoration: none;
-}
-
-.language a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
 footer {
     background-color: #f2f2f2;
-    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-row {
     display: flex;
+    flex-direction: row;
+
     justify-content: space-between;
     padding: 0.75rem 2rem;
+    width: 100%;
 }
 
 .footer-row-left,
 .footer-row-right {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
+}
+
+.bottom-row {
+    width: 80%;
+    margin: auto;
 }
 
 .line {
     opacity: 0.4;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .header-row {
-        padding: 1rem;
-    }
-
-    .footer-row {
+    .bottom-row {
         flex-direction: column;
-        align-items: center;
         gap: 1rem;
+        width: 100%;
+        align-items: center;
     }
 
     .language {
+        flex-wrap: wrap;
         justify-content: center;
     }
 }
