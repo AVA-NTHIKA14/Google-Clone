@@ -5,14 +5,22 @@
     font-family: "Arial", sans-serif;
 }
 
-/* Header */
+/* Header Styling */
 .header-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem;
+    padding: 1rem;
 }
 
+.header-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Adjust spacing */
+    font-size: 0.85rem; /* Reduce font size */
+}
+
+/* Dot Menu & Profile */
 .dot-menu {
     width: 1.5rem;
     height: 1.5rem;
@@ -25,47 +33,27 @@
     object-fit: cover;
 }
 
-/* Links */
-a {
-    text-decoration: none;
-    color: black;
-    font-size: 0.9rem;
+/* Align Gmail & Images */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-a:hover {
+.nav-links a {
+    font-size: 0.9rem; 
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links a:hover {
     text-decoration: underline;
 }
 
-/* Google Image */
+/* Google Logo */
 .google-image {
     width: 272px;
     height: 92px;
-}
-
-/* Buttons */
-.google-button {
-    background-color: #f8f9fa;
-    border: 1px solid #dfe1e5;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-}
-
-.google-button:hover {
-    background-color: #f1f3f4;
-}
-
-/* Language Section */
-.language {
-    font-size: 0.95rem;
-    display: flex;
-    gap: 0.5rem;
-}
-
-.language a {
-    color: blue;
 }
 
 /* Main Section */
@@ -88,7 +76,7 @@ main {
     padding: 0.75rem 1rem;
     border-radius: 50px;
     background: white;
-    border: 1px solid #dfe1e5;
+    border: 1px solid #dfe;
     box-shadow: 0 0 10px rgba(32, 33, 36, 0.28);
     transition: box-shadow 0.2s ease-in-out;
 }
@@ -109,6 +97,34 @@ main {
 .search-icon {
     width: 1.5rem;
     height: 1.5rem;
+}
+
+/* Buttons */
+.google-button {
+    background-color: #f8f9fa;
+    border: 1px solid transparent;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.google-button:hover {
+    border-color: #dfe1e5;
+    background-color: #f1f3f4;
+}
+
+/* Language Section */
+.language {
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.language a {
+    color: blue;
 }
 
 /* Footer */
@@ -140,10 +156,11 @@ footer {
     opacity: 0.4;
 }
 
-
+/* Responsive Fixes */
 @media (max-width: 768px) {
     .header-item {
         gap: 0.5rem;
+        font-size: 0.85rem;
     }
 
     .bottom-row {
